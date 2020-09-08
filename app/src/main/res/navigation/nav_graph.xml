@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/hourFragment">
+
+    <fragment
+        android:id="@+id/hourFragment"
+        android:name="io.github.manuelernesto.gadsleaderboard.ui.hours.HourFragment"
+        android:label="hour_fragment"
+        tools:layout="@layout/hour_fragment" />
+    <fragment
+        android:id="@+id/skillFragment"
+        android:name="io.github.manuelernesto.gadsleaderboard.ui.skilliq.SkillFragment"
+        android:label="skill_fragment"
+        tools:layout="@layout/skill_fragment" />
+</navigation>
