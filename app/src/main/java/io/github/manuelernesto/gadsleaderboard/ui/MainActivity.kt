@@ -1,7 +1,8 @@
-package io.github.manuelernesto.gadsleaderboard
+package io.github.manuelernesto.gadsleaderboard.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import io.github.manuelernesto.gadsleaderboard.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
