@@ -2,4 +2,4 @@ package io.github.manuelernesto.gadsleaderboard.util
 
 import java.io.IOException
 
-class NoInternetExeption(message: String) : IOException(message)
+class ApiExeption(message: String) : IOException(message)
