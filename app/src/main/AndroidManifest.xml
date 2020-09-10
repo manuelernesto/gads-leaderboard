@@ -12,8 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.MainActivity"/>
-        <activity android:name=".ui.submit.SubmitActivity">
+        <activity android:name=".ui.submit.SubmitActivity"/>
+        <activity android:name=".ui.MainActivity" />
+        <activity android:name=".ui.spash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
