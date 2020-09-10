@@ -13,10 +13,15 @@ import io.github.manuelernesto.gadsleaderboard.R
 import io.github.manuelernesto.gadsleaderboard.data.network.AppAPI
 import io.github.manuelernesto.gadsleaderboard.data.repository.LearnerHourRepository
 import kotlinx.android.synthetic.main.hour_fragment.*
+import org.kodein.di.KodeinAware
+import org.kodein.di.android.x.kodein
+import org.kodein.di.generic.instance
 
-class HourFragment : Fragment() {
+class HourFragment : Fragment(), KodeinAware {
 
-    private lateinit var factory: HourViewModelFactory
+    override val kodein by kodein()
+
+    private val factory: HourViewModelFactory by instance()
     private lateinit var viewModel: HourViewModel
 
 
@@ -29,11 +34,6 @@ class HourFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-
-        val api = AppAPI()
-        val repository = LearnerHourRepository(api)
-
-        factory = HourViewModelFactory(repository)
 
         viewModel = ViewModelProviders.of(this, factory).get(HourViewModel::class.java)
         viewModel.getLearnerPerHour()

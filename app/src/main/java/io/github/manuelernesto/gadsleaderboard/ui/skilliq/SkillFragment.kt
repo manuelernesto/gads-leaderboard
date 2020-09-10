@@ -16,10 +16,15 @@ import io.github.manuelernesto.gadsleaderboard.ui.hours.HourAdapter
 import io.github.manuelernesto.gadsleaderboard.ui.hours.HourViewModelFactory
 import kotlinx.android.synthetic.main.hour_fragment.*
 import kotlinx.android.synthetic.main.skill_fragment.*
+import org.kodein.di.KodeinAware
+import org.kodein.di.android.x.kodein
+import org.kodein.di.generic.instance
 
-class SkillFragment : Fragment() {
+class SkillFragment : Fragment(), KodeinAware {
 
-    private lateinit var factory: SkillViewModelFactory
+    override val kodein by kodein()
+
+    private val factory: SkillViewModelFactory by instance()
     private lateinit var viewModel: SkillViewModel
 
     override fun onCreateView(
@@ -31,10 +36,6 @@ class SkillFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        val api = AppAPI()
-        val repository = LearnerSkillRepository(api)
-
-        factory = SkillViewModelFactory(repository)
 
         viewModel = ViewModelProviders.of(this, factory).get(SkillViewModel::class.java)
 
