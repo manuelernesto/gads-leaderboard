@@ -5,4 +5,8 @@ data class LearnerSkill(
     val score: Int,
     val country: String,
     val badgeUrl: String
-)
+) {
+    fun description(): String {
+        return "$score skill IQ Score, $country"
+    }
+}

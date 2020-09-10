@@ -6,7 +6,7 @@ data class LearnerHour(
     val country: String,
     val badgeUrl: String
 ) {
-    fun descrption(): String {
+    fun description(): String {
         return "$hours learning hours, $country"
     }
 }
