@@ -1,19 +1,15 @@
 package io.github.manuelernesto.gadsleaderboard.ui.skilliq
 
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ProgressBar
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import io.github.manuelernesto.gadsleaderboard.R
-import io.github.manuelernesto.gadsleaderboard.data.network.AppAPI
-import io.github.manuelernesto.gadsleaderboard.data.repository.LearnerHourRepository
-import io.github.manuelernesto.gadsleaderboard.data.repository.LearnerSkillRepository
-import io.github.manuelernesto.gadsleaderboard.ui.hours.HourAdapter
-import io.github.manuelernesto.gadsleaderboard.ui.hours.HourViewModelFactory
 import kotlinx.android.synthetic.main.hour_fragment.*
 import kotlinx.android.synthetic.main.skill_fragment.*
 import org.kodein.di.KodeinAware
@@ -42,12 +38,16 @@ class SkillFragment : Fragment(), KodeinAware {
         viewModel.getLearnerPerSkill()
 
         viewModel.learnerPerSkill.observe(viewLifecycleOwner, Observer { learnersPerSkill ->
+
+            progressBarSkill.visibility = ProgressBar.INVISIBLE
+
             rv_skill.also {
                 it.layoutManager = LinearLayoutManager(requireContext())
                 it.setHasFixedSize(true)
                 it.adapter =
                     SkillAdapter(learnersPerSkill)
             }
+
         })
     }
 
