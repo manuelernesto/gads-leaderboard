@@ -7,5 +7,5 @@ class LearnerHourRepository(
     private val api: AppAPI
 ) : SafeAPIRequest() {
 
-    suspend fun getMovies() = apiRequest { api.getLearnerPerHour() }
+    suspend fun getLearnerPerHour() = apiRequest { api.getLearnerPerHour() }
 }
