@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ui.submit.SubmitActivity"
+            android:name=".ui.submit.SubmitProjectActivity"
             android:parentActivityName=".ui.MainActivity" />
         <activity android:name=".ui.MainActivity" />
         <activity android:name=".ui.splash.SplashActivity">
