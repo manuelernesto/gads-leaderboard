@@ -1,6 +1,7 @@
 package io.github.manuelernesto.gadsleaderboard.ui.submit
 
 import android.graphics.PorterDuff
+import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import io.github.manuelernesto.gadsleaderboard.R
@@ -13,10 +14,9 @@ class SubmitProjectActivity : AppCompatActivity() {
         setContentView(R.layout.submit_project_activity)
 
         setSupportActionBar(toolbar)
-        toolbar.navigationIcon?.setColorFilter(
-            resources.getColor(R.color.colorCustom),
-            PorterDuff.Mode.SRC_ATOP
-        )
+
+        val backArrow: Drawable = resources.getDrawable(R.drawable.ic_arrow, null)
+        supportActionBar?.setHomeAsUpIndicator(backArrow)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         if (savedInstanceState == null) {
