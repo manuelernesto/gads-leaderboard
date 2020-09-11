@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import io.github.manuelernesto.gadsleaderboard.R
 import io.github.manuelernesto.gadsleaderboard.ui.MainActivity
-import io.github.manuelernesto.gadsleaderboard.ui.submit.SubmitActivity
 import kotlinx.android.synthetic.main.activity_spash.*
 
 class SplashActivity : AppCompatActivity() {

@@ -9,7 +9,7 @@
 
         <variable
             name="skill"
-            type="io.github.manuelernesto.gadsleaderboard.data.model.LearnerSkill" />
+            type="io.github.manuelernesto.gadsleaderboard.data.model.Learner" />
     </data>
 
     <androidx.cardview.widget.CardView

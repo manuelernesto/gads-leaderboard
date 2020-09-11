@@ -5,11 +5,11 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import io.github.manuelernesto.gadsleaderboard.R
-import io.github.manuelernesto.gadsleaderboard.data.model.LearnerSkill
+import io.github.manuelernesto.gadsleaderboard.data.model.Learner
 import io.github.manuelernesto.gadsleaderboard.databinding.SkilliqLeanerItemBinding
 
 class SkillAdapter(
-    private val skills: List<LearnerSkill>
+    private val skills: List<Learner>
 ) : RecyclerView.Adapter<SkillAdapter.SkillHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =

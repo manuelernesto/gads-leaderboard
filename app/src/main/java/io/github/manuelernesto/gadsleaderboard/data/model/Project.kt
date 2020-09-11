@@ -1,6 +1,6 @@
 package io.github.manuelernesto.gadsleaderboard.data.model
 
-data class SubmitData(
+data class Project(
     val firstName: String,
     val lastName: String,
     val email: String,

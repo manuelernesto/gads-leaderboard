@@ -9,7 +9,7 @@
 
         <variable
             name="hour"
-            type="io.github.manuelernesto.gadsleaderboard.data.model.LearnerHour" />
+            type="io.github.manuelernesto.gadsleaderboard.data.model.Learner" />
     </data>
 
     <androidx.cardview.widget.CardView

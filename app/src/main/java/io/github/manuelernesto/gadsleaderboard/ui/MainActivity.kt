@@ -3,13 +3,9 @@ package io.github.manuelernesto.gadsleaderboard.ui
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.View
-import androidx.viewpager.widget.PagerAdapter
 import io.github.manuelernesto.gadsleaderboard.R
 import io.github.manuelernesto.gadsleaderboard.ui.hours.HourFragment
 import io.github.manuelernesto.gadsleaderboard.ui.skilliq.SkillFragment
-import io.github.manuelernesto.gadsleaderboard.ui.submit.SubmitActivity
 import io.github.manuelernesto.gadsleaderboard.ui.submit.SubmitProjectActivity
 import kotlinx.android.synthetic.main.activity_main.*
 

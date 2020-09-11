@@ -1,7 +1,7 @@
 package io.github.manuelernesto.gadsleaderboard.data.network
 
-import io.github.manuelernesto.gadsleaderboard.data.model.LearnerHour
-import io.github.manuelernesto.gadsleaderboard.data.model.LearnerSkill
+
+import io.github.manuelernesto.gadsleaderboard.data.model.Learner
 import io.github.manuelernesto.gadsleaderboard.util.BASE_URL
 import io.github.manuelernesto.gadsleaderboard.util.HOUR_URL
 import io.github.manuelernesto.gadsleaderboard.util.SKILLIQ_URL
@@ -15,11 +15,11 @@ interface AppAPI {
 
     //get all learners per hour
     @GET(HOUR_URL)
-    suspend fun getLearnerPerHour(): Response<List<LearnerHour>>
+    suspend fun getLearnerPerHour(): Response<List<Learner>>
 
     //get all learners per hour
     @GET(SKILLIQ_URL)
-    suspend fun getLearnerPerSkillIQ(): Response<List<LearnerSkill>>
+    suspend fun getLearnerPerSkillIQ(): Response<List<Learner>>
 
     companion object {
 

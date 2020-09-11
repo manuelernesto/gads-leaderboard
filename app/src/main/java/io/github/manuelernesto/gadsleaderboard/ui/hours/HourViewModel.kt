@@ -3,7 +3,7 @@ package io.github.manuelernesto.gadsleaderboard.ui.hours
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import io.github.manuelernesto.gadsleaderboard.data.model.LearnerHour
+import io.github.manuelernesto.gadsleaderboard.data.model.Learner
 import io.github.manuelernesto.gadsleaderboard.data.repository.LearnerHourRepository
 import io.github.manuelernesto.gadsleaderboard.util.Coroutines
 import kotlinx.coroutines.Job
@@ -14,8 +14,8 @@ class HourViewModel(
 
     private lateinit var job: Job
 
-    private val _hours = MutableLiveData<List<LearnerHour>>()
-    val learnerPerHour: LiveData<List<LearnerHour>>
+    private val _hours = MutableLiveData<List<Learner>>()
+    val learnerPerHour: LiveData<List<Learner>>
         get() = _hours
 
 

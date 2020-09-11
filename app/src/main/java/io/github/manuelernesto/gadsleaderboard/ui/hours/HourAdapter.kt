@@ -5,11 +5,11 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import io.github.manuelernesto.gadsleaderboard.R
-import io.github.manuelernesto.gadsleaderboard.data.model.LearnerHour
+import io.github.manuelernesto.gadsleaderboard.data.model.Learner
 import io.github.manuelernesto.gadsleaderboard.databinding.HourLearnerItemBinding
 
 class HourAdapter(
-    private val hours: List<LearnerHour>
+    private val hours: List<Learner>
 ) : RecyclerView.Adapter<HourAdapter.HourHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =

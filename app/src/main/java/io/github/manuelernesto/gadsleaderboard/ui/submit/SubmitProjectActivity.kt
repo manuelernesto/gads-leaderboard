@@ -4,7 +4,7 @@ import android.graphics.PorterDuff
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import io.github.manuelernesto.gadsleaderboard.R
-import kotlinx.android.synthetic.main.activity_submit.*
+import kotlinx.android.synthetic.main.submit_project_activity.*
 
 class SubmitProjectActivity : AppCompatActivity() {
 
@@ -16,12 +16,12 @@ class SubmitProjectActivity : AppCompatActivity() {
         toolbar.navigationIcon?.setColorFilter(
             resources.getColor(R.color.colorCustom),
             PorterDuff.Mode.SRC_ATOP
-        );
+        )
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
-                .replace(R.id.container, SubmitProjectFragment.newInstance())
+                .replace(R.id.container, SubmitProjectFragment())
                 .commitNow()
         }
     }
