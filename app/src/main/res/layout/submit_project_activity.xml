@@ -171,7 +171,7 @@
                 android:layout_height="2dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                android:background="@color/colorCustom"
+                android:background="@drawable/custom_line"
                 app:layout_constraintBottom_toTopOf="@+id/et_first_name"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
