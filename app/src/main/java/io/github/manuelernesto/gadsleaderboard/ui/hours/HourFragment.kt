@@ -10,6 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import io.github.manuelernesto.gadsleaderboard.R
+import io.github.manuelernesto.gadsleaderboard.util.hide
 import kotlinx.android.synthetic.main.hour_fragment.*
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.x.kodein
@@ -38,7 +39,7 @@ class HourFragment : Fragment(), KodeinAware {
 
         viewModel.learnerPerHour.observe(viewLifecycleOwner, Observer { learnersPerHour ->
 
-            progressBar.visibility = ProgressBar.INVISIBLE
+            progressBar.hide()
 
             rv_hour.also {
                 it.layoutManager = LinearLayoutManager(requireContext())

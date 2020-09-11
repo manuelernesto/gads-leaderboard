@@ -4,10 +4,13 @@ import android.app.Application
 import android.os.Build
 import androidx.annotation.RequiresApi
 import io.github.manuelernesto.gadsleaderboard.data.network.AppAPI
+import io.github.manuelernesto.gadsleaderboard.data.network.GFormAPI
 import io.github.manuelernesto.gadsleaderboard.data.repository.LearnerHourRepository
 import io.github.manuelernesto.gadsleaderboard.data.repository.LearnerSkillRepository
+import io.github.manuelernesto.gadsleaderboard.data.repository.ProjectSubmitRepository
 import io.github.manuelernesto.gadsleaderboard.ui.hours.HourViewModelFactory
 import io.github.manuelernesto.gadsleaderboard.ui.skilliq.SkillViewModelFactory
+import io.github.manuelernesto.gadsleaderboard.ui.submit.SubmitViewModelFactory
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.x.androidXModule
@@ -24,12 +27,15 @@ class AppApplication : Application(), KodeinAware {
         import(androidXModule(this@AppApplication))
 
         bind() from singleton { AppAPI() }
+        bind() from singleton { GFormAPI() }
 
         bind() from singleton { LearnerSkillRepository(instance()) }
         bind() from singleton { LearnerHourRepository(instance()) }
+        bind() from singleton { ProjectSubmitRepository(instance()) }
 
         bind() from provider { SkillViewModelFactory(instance()) }
         bind() from provider { HourViewModelFactory(instance()) }
+        bind() from provider { SubmitViewModelFactory(instance()) }
 
     }
 }

@@ -10,6 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import io.github.manuelernesto.gadsleaderboard.R
+import io.github.manuelernesto.gadsleaderboard.util.hide
 import kotlinx.android.synthetic.main.hour_fragment.*
 import kotlinx.android.synthetic.main.skill_fragment.*
 import org.kodein.di.KodeinAware
@@ -39,7 +40,7 @@ class SkillFragment : Fragment(), KodeinAware {
 
         viewModel.learnerPerSkill.observe(viewLifecycleOwner, Observer { learnersPerSkill ->
 
-            progressBarSkill.visibility = ProgressBar.INVISIBLE
+            progressBarSkill.hide()
 
             rv_skill.also {
                 it.layoutManager = LinearLayoutManager(requireContext())
