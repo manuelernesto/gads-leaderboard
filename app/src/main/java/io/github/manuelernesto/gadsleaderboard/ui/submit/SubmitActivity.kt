@@ -1,5 +1,6 @@
 package io.github.manuelernesto.gadsleaderboard.ui.submit
 
+import android.graphics.PorterDuff
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import io.github.manuelernesto.gadsleaderboard.R
@@ -10,5 +11,10 @@ class SubmitActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_submit)
         setSupportActionBar(toolbar)
+        toolbar.navigationIcon?.setColorFilter(
+            resources.getColor(R.color.colorCustom),
+            PorterDuff.Mode.SRC_ATOP
+        );
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 }

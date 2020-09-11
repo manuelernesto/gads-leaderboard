@@ -6,10 +6,10 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg"
     android:fitsSystemWindows="true"
-    tools:context=".ui.spash.SplashActivity">
+    tools:context=".ui.splash.SplashActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/splash_img"
         android:layout_width="389dp"
         android:layout_height="113dp"
         android:scaleType="centerInside"
