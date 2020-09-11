@@ -41,11 +41,6 @@ class SubmitProjectActivity : AppCompatActivity(), KodeinAware, SubmitListener {
         supportActionBar?.setHomeAsUpIndicator(backArrow)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-//        if (savedInstanceState == null) {
-//            supportFragmentManager.beginTransaction()
-//                .replace(R.id.container, SubmitProjectFragment())
-//                .commitNow()
-//        }
     }
 
 
@@ -55,12 +50,12 @@ class SubmitProjectActivity : AppCompatActivity(), KodeinAware, SubmitListener {
 
     override fun onFailure(message: String) {
         progressBar_Submit.hide()
-        customDialog(this, message,R.drawable.ic_warning)
+        customDialog(this, message, R.drawable.ic_warning)
     }
 
     override fun onSuccess(message: String) {
         progressBar_Submit.hide()
-        customDialog(this, message,R.drawable.ic_check)
+        customDialog(this, message, R.drawable.ic_check)
     }
 
 }

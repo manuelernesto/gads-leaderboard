@@ -21,7 +21,7 @@ fun customDialog(context: Context, title: String, icon: Int) {
     val builder: AlertDialog.Builder = AlertDialog.Builder(context)
     val view = LayoutInflater.from(context).inflate(R.layout.custom_alert_layout,null)
     view.txt_alert.text = title
-    view.img_alert.setImageResource(icon)
+    view.btn_done.setImageResource(icon)
     builder.setView(view)
     builder.show()
 }

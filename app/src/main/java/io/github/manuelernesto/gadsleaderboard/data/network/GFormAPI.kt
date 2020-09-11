@@ -18,7 +18,8 @@ interface GFormAPI {
     suspend fun saveForm(
         @Field(ENTRY_FIRST_NAME) firstName: String,
         @Field(ENTRY_LAST_NAME) lastName: String,
-        @Field(ENTRY_EMAIL) email: String
+        @Field(ENTRY_EMAIL) email: String,
+        @Field(ENTRY_LINK) link: String
     ): Response<Unit>
 
 
