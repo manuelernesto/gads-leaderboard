@@ -10,10 +10,6 @@ import io.github.manuelernesto.gadsleaderboard.R
 
 class SubmitProjectFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = SubmitProjectFragment()
-    }
-
     private lateinit var viewModel: SubmitViewModel
 
     override fun onCreateView(
@@ -26,7 +22,7 @@ class SubmitProjectFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(SubmitViewModel::class.java)
-        // TODO: Use the ViewModel
+
     }
 
 }
